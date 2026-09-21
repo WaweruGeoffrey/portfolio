@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        .main{
+         
+    
+            width: 100%;
+      
+          
+        }
+        .navbar{
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+        .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+        .logo{
+            color: lawngreen;
+            font-family: Arial;
+            font-size: 35px;
+        }
+        .menu{
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+        ul{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li{
+            list-style-type: none;
+          margin-left: 70px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            font-family: arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            
+        }
+        ul li a:hover{
+            color: orange;
+            text-decoration-line: underline;
+        }
+        .hero-image{
+            display: flex;
+         justify-content: left;
+         margin-left: 50px;
+         margin-top: 50px;
+           
+    align-items: center;
+    gap: 30px;
+
+         
+        }
+        .hero-image img{
+           
+            width: 300px;
+         
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #fff;
+            box-shadow: 0 4px 15px rgba(0 ,0,0,0.2);
+         
+
+        }
+       .par{
+        color: white;
+    position: absolute;
+    top: 150px;
+    left: 450px;
+       }
+       .all{
+        font-family: aerial;
+        font-size: 50px;
+       }
+       .name{
+        color: red;
+        font-weight: bold;
+       }
+       
+       #typing {
+    color: cyan;
+    font-weight: bold;
+}
+
+#typing::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.lan{
+    color: red;
+    font-weight: bold;
+}
+.lan2{
+    color: red;
+    font-weight: bold;
+}
+.social-icons{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+  left: 450px;
+
+}
+
+.social-icons a{
+    color: darkmagenta;
+    font-size: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover{
+    color: #00bfff;
+    transform: scale(1.2);
+}
+.hire-btn{
+    display: flex;
+    position: absolute;
+    left: 450px;
+    margin-top: 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.hire-btn a:hover{
+background-color: rgb(0, 255, 8);
+color: rgb(220, 33, 20);
+}
+
+
+
+    </style>
+ <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">GeoTech</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+       
+  </div>
+     
+        </div>
+       
+    </div>
+    
+      <div class="hero-image">
+            <img src="darkfine.jpeg">
+        </div>
+      
+   <div class="par">
+    <p><span class="all">Bonjour, It's <span class="name">Geoffrey</span></span><br><h2>i am a <span id="typing"></span></h2><br>
+    A passionate Front End Developer with a strong foundation in Computer Science By holding a <br>
+Diploma in Computer Science. My expertise lies in building responsive, user-friendly Websites and <br>
+Applications using technologies like <span class="lan">HTML, CSS, JAVASCRIPT</span> and mordern 
+frameworks <br>such as  <span class="lan2">React</span> with a keen eye for detail. I strive to deliver 
+smoothest, visual appealing and <br>user experiences ensuring functionality is prioritized in every 
+project. <br>My technical background combined with my creative approach drive my committment to delivering <br>
+high quality solutions. </p>
+   </div>
+    <div class="social-icons">
+    <a href="https://facebook.com/Geoff Rey" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://instagram.com/waweraw17" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/waweru geoffrey" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+<a href="https:wawerugeoffrey@gmail.com">Email</a>
+</div>
+
+
+   
+ </div>
+  <script>
+const words = [
+    "Web Developer",
+    "Graphic Designer",
+    "Freelancer"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typingElement = document.getElementById("typing");
+
+function type() {
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex--);
+    } else {
+        typingElement.textContent = currentWord.substring(0, charIndex++);
+    }
+
+    let speed = isDeleting ? 100 : 150;
+
+    if (!isDeleting && charIndex === currentWord.length + 1) {
+        speed = 1500; // pause before deleting
+        isDeleting = true;
+    }
+
+    if (isDeleting && charIndex === -1) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 500;
+    }
+
+    setTimeout(type, speed);
+}
+
+type();
+</script>
+</body>
+</html>

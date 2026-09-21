@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - GeoTech</title>
+
+```
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .main {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+    }
+
+    .icon {
+        width: 200px;
+        float: left;
+        height: 70px;
+    }
+
+    .logo {
+        color: lawngreen;
+        font-family: Arial;
+        font-size: 35px;
+        margin-top: 15px;
+    }
+
+    .menu {
+        width: 900px;
+        float: left;
+        height: 70px;
+    }
+
+    ul {
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul li {
+        list-style-type: none;
+        margin-left: 45px;
+        margin-top: 35px;
+        font-size: 14px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+
+    ul li a:hover {
+        color: orange;
+        text-decoration: underline;
+    }
+
+    /* SKILLS */
+
+    .skills {
+        width: 1100px;
+        margin: 70px auto;
+    }
+
+    .skills h1 {
+        text-align: center;
+        color: lawngreen;
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .skill-card {
+        border: 1px solid lawngreen;
+        border-radius: 12px;
+        padding: 30px;
+        transition: 0.3s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 0 15px lawngreen;
+    }
+
+    .skill-card i {
+        font-size: 40px;
+        color: cyan;
+        margin-bottom: 15px;
+    }
+
+    .skill-card h2 {
+        color: orange;
+        margin-bottom: 15px;
+    }
+
+    .skill-card p {
+        color: #ddd;
+        line-height: 1.6;
+    }
+
+    .skill-list {
+        margin-top: 15px;
+        padding-left: 20px;
+    }
+
+    .skill-list li {
+        margin: 10px 0;
+        color: white;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 60px;
+        color: gray;
+    }
+
+    @media (max-width: 900px) {
+
+        .navbar {
+            width: 95%;
+        }
+
+        .menu {
+            width: auto;
+        }
+
+        .skills {
+            width: 90%;
+        }
+
+        .skills-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="main">
+
+```
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="icon">
+        <h2 class="logo">GeoTech</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="skills.html">SKILLS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!-- SKILLS SECTION -->
+
+<section class="skills">
+
+    <h1>My Skills</h1>
+
+    <div class="skills-container">
+
+        <!-- HTML -->
+
+        <div class="skill-card">
+
+            <i class="fa-brands fa-html5"></i>
+
+            <h2>HTML</h2>
+
+            <p>
+                I use HTML to structure websites and create clean,
+                semantic and accessible web pages.
+            </p>
+
+        </div>
+
+
+        <!-- CSS -->
+
+        <div class="skill-card">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            <h2>CSS</h2>
+
+            <p>
+                I use CSS to create responsive layouts, animations,
+                navigation bars, cards and visually appealing interfaces.
+            </p>
+
+        </div>
+
+
+        <!-- JAVASCRIPT -->
+
+        <div class="skill-card">
+
+            <i class="fa-brands fa-js"></i>
+
+            <h2>JavaScript</h2>
+
+            <p>
+                I use JavaScript to add interactivity and dynamic
+                functionality to websites.
+            </p>
+
+        </div>
+
+
+        <!-- TYPESCRIPT -->
+
+        <div class="skill-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h2>TypeScript</h2>
+
+            <p>
+                I am developing my TypeScript skills to write more
+                structured, maintainable and reliable JavaScript applications.
+            </p>
+
+        </div>
+
+
+        <!-- PYTHON -->
+
+        <div class="skill-card">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h2>Python</h2>
+
+            <p>
+                I am learning Python and building programs to strengthen
+                my programming and problem-solving skills.
+            </p>
+
+        </div>
+
+
+        <!-- GIT & GITHUB -->
+
+        <div class="skill-card">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h2>Git & GitHub</h2>
+
+            <p>
+                I use Git and GitHub to manage source code, track changes,
+                maintain repositories and share my projects.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>© 2026 GeoTech | Geoffrey Waweru</p>
+    </div>
+
+</section>
+```
+
+</div>
+
+</body>
+</html>

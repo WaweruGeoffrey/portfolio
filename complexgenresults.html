@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Student Result System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2f3;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid gray;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .delete-btn {
+            background: red;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Advanced Student Result System</h2>
+
+    <input type="number" id="adm" placeholder="Admission Number">
+    <input type="text" id="name" placeholder="Student Name">
+
+    <input type="number" id="math" placeholder="Math">
+    <input type="number" id="eng" placeholder="English">
+    <input type="number" id="sci" placeholder="Science">
+    <input type="number" id="comp" placeholder="Computer">
+
+    <button onclick="addStudent()">Add Result</button>
+
+    <table id="resultTable">
+        <tr>
+            <th>Adm</th>
+            <th>Name</th>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Grade</th>
+            <th>Remarks</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </table>
+</div>
+
+<script>
+function getGrade(avg) {
+    if (avg >= 80) return "A";
+    else if (avg >= 70) return "B";
+    else if (avg >= 60) return "C";
+    else if (avg >= 50) return "D";
+    else return "E";
+}
+
+function getRemarks(grade) {
+    if (grade === "A") return "Excellent";
+    if (grade === "B") return "Very Good";
+    if (grade === "C") return "Good";
+    if (grade === "D") return "Pass";
+    return "Fail";
+}
+
+function addStudent() {
+    let adm = document.getElementById("adm").value;
+    let name = document.getElementById("name").value;
+
+    let math = Number(document.getElementById("math").value);
+    let eng = Number(document.getElementById("eng").value);
+    let sci = Number(document.getElementById("sci").value);
+    let comp = Number(document.getElementById("comp").value);
+
+    let total = math + eng + sci + comp;
+    let avg = total / 4;
+
+    let grade = getGrade(avg);
+    let remarks = getRemarks(grade);
+    let status = avg >= 50 ? "PASS" : "FAIL";
+
+    let table = document.getElementById("resultTable");
+    let row = table.insertRow();
+
+    row.innerHTML = `
+        <td>${adm}</td>
+        <td>${name}</td>
+        <td>${total}</td>
+        <td>${avg.toFixed(2)}</td>
+        <td>${grade}</td>
+        <td>${remarks}</td>
+        <td>${status}</td>
+        <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+    `;
+
+    clearInputs();
+}
+
+function deleteRow(btn) {
+    let row = btn.parentNode.parentNode;
+    row.remove();
+}
+
+function clearInputs() {
+    document.getElementById("adm").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("math").value = "";
+    document.getElementById("eng").value = "";
+    document.getElementById("sci").value = "";
+    document.getElementById("comp").value = "";
+}
+</script>
+
+</body>
+</html>
